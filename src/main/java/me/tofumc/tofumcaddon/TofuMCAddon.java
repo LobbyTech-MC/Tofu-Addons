@@ -184,7 +184,7 @@ public class TofuMCAddon extends JavaPlugin implements SlimefunAddon {
         };
         PotionMeta soulEssenceMeta = (PotionMeta) soulEssenceStack.getItemMeta();
         soulEssenceMeta.setColor(Color.WHITE);
-        soulEssenceMeta.addItemFlags(new ItemFlag[]{ItemFlag.HIDE_POTION_EFFECTS});
+        soulEssenceMeta.addItemFlags(new ItemFlag[]{ItemFlag.HIDE_ADDITIONAL_TOOLTIP});
         soulEssenceStack.setItemMeta(soulEssenceMeta);
         SlimefunItem sfSoulEssence = new SlimefunItem(category, soulEssenceStack, RecipeType.ENHANCED_CRAFTING_TABLE, essRe);
         sfSoulEssence.register(this);
@@ -220,7 +220,7 @@ public class TofuMCAddon extends JavaPlugin implements SlimefunAddon {
         sfBurntNote.register(this);
 
         //Wet Note
-        SlimefunItemStack wetNoteStack = new SlimefunItemStack("TOFU_WET_NOTE", Material.SCUTE, "§a§l毛豆泥豆腐");
+        SlimefunItemStack wetNoteStack = new SlimefunItemStack("TOFU_WET_NOTE", Material.TURTLE_SCUTE, "§a§l毛豆泥豆腐");
         ItemStack[] WNRep = {
                 new SlimefunItemStack(bitStack, 1), new ItemStack(Material.SLIME_BALL), new SlimefunItemStack(bitStack, 1),
                 new SlimefunItemStack(bitStack, 1), new ItemStack(Material.FERN), new SlimefunItemStack(bitStack, 1),
@@ -299,7 +299,7 @@ public class TofuMCAddon extends JavaPlugin implements SlimefunAddon {
         ItemMeta aegisMeta = aegisStack.getItemMeta();
         aegisMeta.setUnbreakable(true);
         aegisMeta.addItemFlags(new ItemFlag[]{ItemFlag.HIDE_UNBREAKABLE});
-        aegisMeta.addItemFlags(new ItemFlag[]{ItemFlag.HIDE_POTION_EFFECTS});
+        aegisMeta.addItemFlags(new ItemFlag[]{ItemFlag.HIDE_ADDITIONAL_TOOLTIP});
         BlockStateMeta aegisBSMeta = (BlockStateMeta) aegisMeta;
         Banner aegisBanner = (Banner) aegisBSMeta.getBlockState();
         aegisBanner.setBaseColor(DyeColor.BROWN);
